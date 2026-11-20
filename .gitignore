@@ -1,0 +1,6 @@
+audit/
+evidence/
+deliverables/
+node_modules/
+.env*
+*.zip
