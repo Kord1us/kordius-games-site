@@ -61,7 +61,7 @@ try {
           });
           assert.ok(info.w <= width, `horizontal overflow (${info.w}px at ${width}px)`);
           assert.equal(info.canonical, new URL(relative, site.url).href);
-          assert.doesNotMatch(info.text, /mimic|мимик|lorem ipsum|\[operator\]|\[privacy contact\]/i);
+          assert.doesNotMatch(info.text, /hordefuse|mimic|мимик|lorem ipsum|\[operator\]|\[privacy contact\]/i);
           if (route === "privacy/sticky-orbs/") {
             assert.match(info.text, /Yandex Mobile Ads/);
             assert.match(info.text, /AppMetrica/);

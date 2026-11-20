@@ -32,7 +32,7 @@ function render(lang, route, error = false) {
     ${summary ? `<p>${safe(summary)}</p>` : ""}</header>`;
   const photo = (game, file = game.image, alt = game[lang].alt, eager = false) =>
     `<img src="${asset(file)}" alt="${safe(alt)}" width="${game.width}" height="${game.height}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
-  const artClass = (game) => game.id === "hordefuse" ? " horde-art" : "";
+  const artClass = (game) => game.artwork ? " artwork" : "";
   const card = (game, heading = "h3") => {
     const g = game[lang];
     const href = link(`games/${game.id}/`);
